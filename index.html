@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BiggerDiggerN</title>
+    <title>My Custom Site</title>
 
     <script src="https://iframe.chat/scripts/main.min.js"></script>
     <script>
@@ -25,7 +25,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white; 
             background-color: #0d0d0d; 
-            background-image: url('https://files.catbox.moe/musng7.jpg');
+            /* Replace the URL below with your landscape image */
+            background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -52,9 +53,11 @@
             background-color: rgba(0, 0, 0, 0.65); 
             border-radius: 20px;
             margin-bottom: 25px;
-            backdrop-filter: blur(8px);
+            /* Updated: Reduced blur to 3px */
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
             box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.8);
-            /* UPDATED: Border thickness 1.25px */
+            /* Border thickness 1.25px */
             border: 1.25px solid rgba(240, 240, 240, 0.4);
         }
 
@@ -78,8 +81,11 @@
             width: 100%;
             aspect-ratio: 1 / 1; 
             border-radius: 15px;
-            border: 3px solid #00ff00; 
             object-fit: cover;
+            /* The "Floating Gap" Effect */
+            border: 3px solid transparent; 
+            outline: 3px solid #00ff00;
+            outline-offset: 0px;
         }
 
         .header-text {
@@ -117,7 +123,6 @@
         .text-list p {
             margin-bottom: 3px;
             font-size: 0.95rem;
-            /* UPDATED: Line spacing set to 1.0 */
             line-height: 1.0; 
             color: rgba(255, 255, 255, 0.9);
         }
@@ -125,7 +130,6 @@
         /* --- Footer Styles --- */
         .divider-line {
             border: none;
-            /* UPDATED: Brighter dashed line and negative margins to reach edges */
             border-top: 1px dashed rgba(255, 255, 255, 0.35);
             margin: 20px -10px; 
             width: calc(100% + 20px);
@@ -162,6 +166,31 @@
             display: block;
         }
 
+        /* --- Easter Egg Button Styles --- */
+        #reveal-btn {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            color: rgba(255, 255, 255, 0.6);
+            border: 1.25px solid rgba(240, 240, 240, 0.4);
+            border-radius: 12px;
+            padding: 10px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: 0.3s;
+            margin-bottom: 25px;
+            backdrop-filter: blur(3px);
+            outline: none;
+        }
+
+        #reveal-btn:hover {
+            background: rgba(0, 255, 0, 0.1);
+            color: #00ff00;
+            border-color: #00ff00;
+        }
+
         /* --- MOBILE TWEAKS --- */
         @media (max-width: 600px) {
             .header-card { flex-direction: column; align-items: center; text-align: center; padding: 20px; }
@@ -179,11 +208,11 @@
 
         <div class="card header-card">
             <div class="header-left-group">
-                <img src="https://files.catbox.moe/4qemrl.jpg" alt="Square Image" class="left-image">
-                <h1 class="header-text">BiggerDiggerN</h1>
+                <img src="https://files.catbox.moe/1ztrr6.jpg" alt="Square Image" class="left-image">
+                <h1 class="header-text">LargeTextHere</h1>
             </div>
             <div class="header-right-group">
-                <img src="https://files.catbox.moe/4vxg9u.webp" alt="Stretched Image" class="right-image">
+                <img src="https://files.catbox.moe/1ztrr6.jpg" alt="Stretched Image" class="right-image">
             </div>
         </div>
 
@@ -215,7 +244,32 @@
             </div>
         </div>
 
+        <button id="reveal-btn" onclick="toggleEasterEgg()">REVEAL SECRET</button>
+
+        <div id="easter-egg-container" class="card" style="display: none; padding: 20px;">
+            <p style="text-align: center; font-weight: bold; color: #00ff00; letter-spacing: 1px;">
+                YOU FOUND THE EASTER EGG!
+            </p>
+        </div>
+
     </div>
+
+    <script>
+    function toggleEasterEgg() {
+        var x = document.getElementById("easter-egg-container");
+        var btn = document.getElementById("reveal-btn");
+        
+        if (x.style.display === "none") {
+            x.style.display = "block";
+            btn.innerHTML = "HIDE SECRET";
+            // Smoothly scroll down to the secret
+            x.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            x.style.display = "none";
+            btn.innerHTML = "REVEAL SECRET";
+        }
+    }
+    </script>
 
 </body>
 </html>
