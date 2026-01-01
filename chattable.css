@@ -76,3 +76,20 @@ body {
   background: rgba(0, 255, 0, 0.3);
   border-radius: 10px;
 }
+
+/* --- Special UID Badge for 9YnWsJJEUWViszscTVPapbhcfwb2 --- */
+
+/* Targets the specific user by their ID attribute */
+[uid="9YnWsJJEUWViszscTVPapbhcfwb2"] .senderInfo:after {
+  content: " ✔"; /* The checkmark icon */
+  font-size: 0.8rem;
+  color: #00ff00; /* Neon green to match your theme */
+  margin-left: 5px;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.8); /* Slight neon glow */
+  vertical-align: middle;
+}
+
+/* Optional: Make the username itself a different color for this UID */
+[uid="9YnWsJJEUWViszscTVPapbhcfwb2"] .senderInfo {
+  color: #00ff00 !important; /* Changes from yellow to green */
+}
