@@ -77,19 +77,19 @@ body {
   border-radius: 10px;
 }
 
-/* --- Special UID Badge for 9YnWsJJEUWViszscTVPapbhcfwb2 --- */
+/* --- Special UID Badge (Aligned) --- */
 
-/* Targets the specific user by their ID attribute */
-[uid="9YnWsJJEUWViszscTVPapbhcfwb2"] .senderInfo:after {
-  content: " ✔"; /* The checkmark icon */
-  font-size: 0.8rem;
-  color: #00ff00; /* Neon green to match your theme */
-  margin-left: 5px;
-  text-shadow: 0 0 5px rgba(0, 255, 0, 0.8); /* Slight neon glow */
-  vertical-align: middle;
+[uid="9YnWsJJEUWViszscTVPapbhcfwb2"] .senderInfo {
+  color: #00ff00 !important; 
+  display: inline-flex; /* Use flexbox to align children */
+  align-items: center;  /* Forces the text and checkmark to share the same center line */
+  gap: 5px;             /* Creates a consistent space between name and icon */
 }
 
-/* Optional: Make the username itself a different color for this UID */
-[uid="9YnWsJJEUWViszscTVPapbhcfwb2"] .senderInfo {
-  color: #00ff00 !important; /* Changes from yellow to green */
+[uid="9YnWsJJEUWViszscTVPapbhcfwb2"] .senderInfo:after {
+  content: "✔"; 
+  font-size: 0.85rem;
+  color: #00ff00; 
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
+  line-height: 1;      /* Prevents the icon from adding extra height */
 }
