@@ -183,31 +183,35 @@
             color: #00ff00;
         }
 
-        .button-row {
+.button-row {
     display: flex;
-    gap: 12px;           /* Space between buttons */
-    margin-top: 15px;    /* Space after the text list */
-    justify-content: flex-start; /* Aligns them to the left */
+    gap: 15px;           /* Slightly more gap for larger buttons */
+    margin-top: 20px;    
+    justify-content: flex-start; 
 }
 
 .circle-btn {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;  /* Makes them perfect circles */
+    width: 50px;         /* Increased from 35px */
+    height: 50px;        /* Increased from 35px */
+    border-radius: 50%;  
     background: rgba(255, 255, 255, 0.1);
     border: 1.25px solid rgba(240, 240, 240, 0.4);
-    transition: 0.3s ease;
-    display: block;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Added a bouncy transition */
+    display: flex;       /* Use flex to center the emoji */
+    align-items: center; 
+    justify-content: center;
     cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;   /* Makes the emoji larger */
 }
 
 .circle-btn:hover {
-    background: rgba(0, 255, 0, 0.2);
-    border-color: #00ff00;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    transform: translateY(-2px); /* Slight lift on hover */
+    background: rgba(255, 255, 0, 0.2); /* Slight yellow tint for cheese theme */
+    border-color: #ffff00;
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+    transform: scale(1.1); /* Slightly grows the button on hover */
 }
-
+        
         /* --- MOBILE TWEAKS --- */
         @media (max-width: 600px) {
             .header-card { flex-direction: column; align-items: center; text-align: center; padding: 20px; }
@@ -287,13 +291,13 @@
         <p>Text here...</p>
     </div>
 
-    <div class="button-row">
-        <a href="https://examplesite123.com" target="_blank" class="circle-btn"></a>
-        <a href="https://examplesite123.com" target="_blank" class="circle-btn"></a>
-        <a href="https://examplesite123.com" target="_blank" class="circle-btn"></a>
-        <a href="https://examplesite123.com" target="_blank" class="circle-btn"></a>
-        <a href="https://examplesite123.com" target="_blank" class="circle-btn"></a>
-    </div>
+<div class="button-row">
+    <a href="https://examplesite123.com" target="_blank" class="circle-btn">🧀</a>
+    <a href="https://examplesite123.com" target="_blank" class="circle-btn">🧀</a>
+    <a href="https://examplesite123.com" target="_blank" class="circle-btn">🧀</a>
+    <a href="https://examplesite123.com" target="_blank" class="circle-btn">🧀</a>
+    <a href="https://examplesite123.com" target="_blank" class="circle-btn">🧀</a>
+</div>
 </div>
         
     </div>
