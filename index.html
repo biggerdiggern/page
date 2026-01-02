@@ -183,6 +183,31 @@
             color: #00ff00;
         }
 
+        .button-row {
+    display: flex;
+    gap: 12px;           /* Space between buttons */
+    margin-top: 15px;    /* Space after the text list */
+    justify-content: flex-start; /* Aligns them to the left */
+}
+
+.circle-btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;  /* Makes them perfect circles */
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.25px solid rgba(240, 240, 240, 0.4);
+    transition: 0.3s ease;
+    display: block;
+    cursor: pointer;
+}
+
+.circle-btn:hover {
+    background: rgba(0, 255, 0, 0.2);
+    border-color: #00ff00;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
         /* --- MOBILE TWEAKS --- */
         @media (max-width: 600px) {
             .header-card { flex-direction: column; align-items: center; text-align: center; padding: 20px; }
