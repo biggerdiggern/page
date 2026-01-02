@@ -25,8 +25,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: white; 
             background-color: #0d0d0d; 
-            /* Replace the URL below with your landscape image */
-            background-image: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=2074&auto=format&fit=crop');
+            background-image: url('https://files.catbox.moe/musng7.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -53,11 +52,9 @@
             background-color: rgba(0, 0, 0, 0.65); 
             border-radius: 20px;
             margin-bottom: 25px;
-            /* Updated: Reduced blur to 3px */
             backdrop-filter: blur(3px);
             -webkit-backdrop-filter: blur(3px);
             box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.8);
-            /* Border thickness 1.25px */
             border: 1.25px solid rgba(240, 240, 240, 0.4);
         }
 
@@ -82,7 +79,6 @@
             aspect-ratio: 1 / 1; 
             border-radius: 15px;
             object-fit: cover;
-            /* The "Floating Gap" Effect */
             border: 3px solid transparent; 
             outline: 3px solid #00ff00;
             outline-offset: 0px;
@@ -127,7 +123,7 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
-        /* --- Footer Styles --- */
+        /* --- Footer & Divider --- */
         .divider-line {
             border: none;
             border-top: 1px dashed rgba(255, 255, 255, 0.35);
@@ -148,7 +144,7 @@
             display: block;
         }
 
-        /* --- Compact Chatbox Container --- */
+        /* --- Chatbox Styles --- */
         #chattable-container {
             width: 100%;
             height: 250px; 
@@ -166,29 +162,25 @@
             display: block;
         }
 
-        /* --- Easter Egg Button Styles --- */
+        /* --- UPDATED: Minimal 'easter egg' Link --- */
         #reveal-btn {
-            width: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            color: rgba(255, 255, 255, 0.6);
-            border: 1.25px solid rgba(240, 240, 240, 0.4);
-            border-radius: 12px;
-            padding: 10px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.3);
             cursor: pointer;
-            font-family: inherit;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+            font-size: 0.7rem;
+            text-transform: lowercase;
+            padding: 5px;
             transition: 0.3s;
+            float: right;
+            margin-top: -15px; 
             margin-bottom: 25px;
-            backdrop-filter: blur(3px);
             outline: none;
+            font-family: inherit;
         }
 
         #reveal-btn:hover {
-            background: rgba(0, 255, 0, 0.1);
             color: #00ff00;
-            border-color: #00ff00;
         }
 
         /* --- MOBILE TWEAKS --- */
@@ -208,11 +200,11 @@
 
         <div class="card header-card">
             <div class="header-left-group">
-                <img src="https://files.catbox.moe/1ztrr6.jpg" alt="Square Image" class="left-image">
+                <img src="https://files.catbox.moe/1ztrr6.jpg" alt="Profile" class="left-image">
                 <h1 class="header-text">LargeTextHere</h1>
             </div>
             <div class="header-right-group">
-                <img src="https://files.catbox.moe/1ztrr6.jpg" alt="Stretched Image" class="right-image">
+                <img src="https://files.catbox.moe/1ztrr6.jpg" alt="Banner" class="right-image">
             </div>
         </div>
 
@@ -237,20 +229,29 @@
             </div>
         </div>
 
-        <div class="card" style="padding: 15px;"> 
+        <div class="card" style="padding: 15px; margin-bottom: 15px;"> 
             <h2 style="font-size: 0.8rem; margin-bottom: 8px; opacity: 0.5; text-transform: uppercase; letter-spacing: 1px; padding-left: 5px;">Chatroom</h2>
             <div id="chattable-container">
                 <iframe src="https://iframe.chat/embed?chat=biggerdiggern" id="chattable"></iframe>
             </div>
         </div>
 
-        <button id="reveal-btn" onclick="toggleEasterEgg()">REVEAL SECRET</button>
+        <button id="reveal-btn" onclick="toggleEasterEgg()">easter egg</button>
+        <div style="clear: both;"></div>
 
-        <div id="easter-egg-container" class="card" style="display: none; padding: 20px;">
-            <p style="text-align: center; font-weight: bold; color: #00ff00; letter-spacing: 1px;">
-                YOU FOUND THE EASTER EGG!
-            </p>
-        </div>
+        <div id="easter-egg-container" class="card content-card" style="display: none;">
+            <p class="link-text">you found the easter egg!</p>
+            
+            <div class="text-list">
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+            </div>
+            </div>
 
     </div>
 
@@ -261,12 +262,11 @@
         
         if (x.style.display === "none") {
             x.style.display = "block";
-            btn.innerHTML = "HIDE SECRET";
-            // Smoothly scroll down to the secret
+            btn.innerHTML = "easter egg (hide)";
             x.scrollIntoView({ behavior: 'smooth' });
         } else {
             x.style.display = "none";
-            btn.innerHTML = "REVEAL SECRET";
+            btn.innerHTML = "easter egg";
         }
     }
     </script>
