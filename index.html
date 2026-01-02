@@ -23,7 +23,7 @@
         /* 2. Body & Background */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: white; 
+            color: #FFFFFF; /* Max intensity white */
             background-color: #0d0d0d; 
             background-image: url('https://files.catbox.moe/musng7.jpg');
             background-size: cover;
@@ -88,21 +88,21 @@
             font-size: 1.6rem; 
             font-weight: bold;
             line-height: 1.1;
+            color: #FFFFFF; /* Max intensity white */
         }
 
         .header-right-group {
             width: 70%;
         }
 
-        .right-image {
-            width: 100%;
-            aspect-ratio: 16 / 9; 
-            border-radius: 12px;
-            object-fit: fill; 
-            opacity: 0.9;
-            display: block;
-        }
-
+.right-image {
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    border-radius: 12px;
+    object-fit: cover; /* Changed from fill to cover for better quality */
+    opacity: 1.0;      /* UPDATED: Set to 1.0 to restore full brightness */
+    display: block;
+}
         /* --- Content Card --- */
         .content-card {
             padding: 20px 25px;
@@ -120,13 +120,13 @@
             margin-bottom: 3px;
             font-size: 0.95rem;
             line-height: 1.0; 
-            color: rgba(255, 255, 255, 0.9);
+            color: #FFFFFF; /* Max intensity white */
         }
 
         /* --- Footer & Divider --- */
         .divider-line {
             border: none;
-            border-top: 1px dashed rgba(255, 255, 255, 0.35);
+            border-top: 1px dashed rgba(255, 255, 255, 0.5); /* Increased opacity for visibility */
             margin: 20px -10px; 
             width: calc(100% + 20px);
         }
@@ -134,12 +134,12 @@
         .footer-info {
             text-align: center;
             font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.6);
+            color: #FFFFFF; /* Max intensity white */
         }
 
         .smallest-text {
             font-size: 0.75rem;
-            color: rgba(255, 255, 255, 0.4);
+            color: rgba(255, 255, 255, 0.7); /* Slightly dimmed for hierarchy, but much brighter */
             margin-top: 5px;
             display: block;
         }
@@ -162,11 +162,11 @@
             display: block;
         }
 
-        /* --- UPDATED: Minimal 'easter egg' Link --- */
+        /* --- Minimal 'easter egg' Link --- */
         #reveal-btn {
             background: none;
             border: none;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.5); /* Brighter base color */
             cursor: pointer;
             font-size: 0.7rem;
             text-transform: lowercase;
@@ -200,11 +200,11 @@
 
         <div class="card header-card">
             <div class="header-left-group">
-                <img src="https://files.catbox.moe/4qemrl.jpg" alt="Profile" class="left-image">
-                <h1 class="header-text">BiggerDiggerN</h1>
+                <img src="https://files.catbox.moe/1ztrr6.jpg" alt="Profile" class="left-image">
+                <h1 class="header-text">LargeTextHere</h1>
             </div>
             <div class="header-right-group">
-                <img src="https://files.catbox.moe/4vxg9u.webp" alt="Banner" class="right-image">
+                <img src="https://files.catbox.moe/1ztrr6.jpg" alt="Banner" class="right-image">
             </div>
         </div>
 
@@ -212,34 +212,25 @@
             <a href="https://files.catbox.moe/hfil0n.jpg" target="_blank" class="link-text">https://files.catbox.moe/hfil0n.jpg</a>
             
             <div class="text-list">
-                <p>👑Rank #1 Diddler✅</p>
-                <p>🧐Cunny Enthusiast✅</p>
-                <p>🍕Cheese Pizza Enjoyer✅</p>
-                <p>🗿Based✅</p>
-                <p>😎Sigma Male✅</p>
-                <p>🏝️Epstein Island VIP✅</p>
-                <p>🍼Oiled Up✅</p>
-                <p>📝Certified Pedophile✅</p>
-                <p>🥷🏻Menace To Society✅</p>
-                <p>🤕Retarded✅</p>
-                <p>🗺️MAP Pride✅</p>
-                <p><br></p>
-                <p>16, M</p>
-                <p><br></p>
-                <p>My accounts constantly get termed so if i don't respond, I'm probably already on another alt.</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
+                <p>Text here...</p>
             </div>
 
             <hr class="divider-line">
 
             <div class="footer-info">
-                <p>This is a live text file so I can edit it even when my discord account gets limited or disabled.</p>
-                <p>Session: 05a7008dad2dc6a8c7af30744ede97856c4420823f9080b615420620ac0b64f016</p>
-                <span class="smallest-text">""Sure, mistakes happen. But only in exceedingly rare circumstances will I undo a nut. If you would like to issue an appeal, shoot your nut on me.""</span>
+                <p>Small text, abcdefghijklmnopqrstuvwxyz1234567890</p>
+                <span class="smallest-text">"Smaller text, 101010101010101010101010101010101abcdefgh."</span>
             </div>
         </div>
 
         <div class="card" style="padding: 15px; margin-bottom: 15px;"> 
-            <h2 style="font-size: 0.8rem; margin-bottom: 8px; opacity: 0.5; text-transform: uppercase; letter-spacing: 1px; padding-left: 5px;">Chatroom</h2>
+            <h2 style="font-size: 0.8rem; margin-bottom: 8px; opacity: 0.8; color: #FFFFFF; text-transform: uppercase; letter-spacing: 1px; padding-left: 5px;">Chatroom</h2>
             <div id="chattable-container">
                 <iframe src="https://iframe.chat/embed?chat=biggerdiggern" id="chattable"></iframe>
             </div>
@@ -260,7 +251,7 @@
                 <p>Text here...</p>
                 <p>Text here...</p>
             </div>
-            </div>
+        </div>
 
     </div>
 
